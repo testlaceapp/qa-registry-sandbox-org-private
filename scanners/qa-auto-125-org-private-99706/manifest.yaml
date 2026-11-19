@@ -1,0 +1,22 @@
+apiVersion: "1"
+axis: scanner
+author: lace-automation
+name: qa-auto-125-org-private-99706
+version: v0.1.0
+displayName: QA Automation Org-Private Publish Probe Scanner
+description: Automated org_private publish-path test (#125 follow-up) - real GitHub Actions OIDC publish, not a fixture POST.
+categories: [qa]
+provider: aws
+configSchema:
+  type: object
+  properties: {}
+runtime:
+  location: external
+  dispatch: lace-pull
+  endpointSource: install
+  configRequires: []
+outputs:
+  findings:
+    schemas:
+      qa:
+        type: object
